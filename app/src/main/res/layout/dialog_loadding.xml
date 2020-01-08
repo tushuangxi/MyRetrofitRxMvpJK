@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:background="@drawable/loading_bg"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <com.lding.pad.myseial.libding.widget.loading.ProgressWheel
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_marginTop="10px"
+            android:layout_centerHorizontal="true"
+            app:matProg_barColor="@color/white"
+            app:matProg_progressIndeterminate="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60px"
+            android:gravity="center"
+            android:text="努力加载中"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="5px"
+            />
+    </LinearLayout>
+</LinearLayout>
