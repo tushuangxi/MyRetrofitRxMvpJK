@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MySeial</string>
+    <string name="app_name">MyRetrofitRxMvpJK</string>
 
     <string name="test">文本</string>
     <string name="network_error">网络连接已断开</string>
@@ -11,4 +11,7 @@
     <string name="qiut">退出</string>
     <string name="go_setting">去设置</string>
     <string name="getpermisson_faild">权限获取失败</string>
+
+    <string name="error_fatal">不能启动应用</string>
+    <string name="initializing_splash_library">初始化闪屏库&#8230;</string>
 </resources>

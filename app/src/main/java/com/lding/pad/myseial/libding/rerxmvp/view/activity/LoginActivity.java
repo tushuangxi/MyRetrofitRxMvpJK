@@ -1,6 +1,7 @@
 package com.lding.pad.myseial.libding.rerxmvp.view.activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,7 @@ import com.lding.pad.myseial.libding.rerxmvp.interfaceUtils.interfaceUtilsAll;
 import com.lding.pad.myseial.libding.rerxmvp.presenter.LoginPresenter;
 import com.lding.pad.myseial.libding.utils.ToastUtils;
 import com.lding.pad.myseial.libding.widget.loading.LoadingActivityDialog;
+import com.lding.pad.myseial.library.gifloadinglibrary.ui.GifActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -83,7 +85,8 @@ public class LoginActivity extends BaseActivity implements interfaceUtilsAll.ILo
 
     @Override
     public void toMain() {
-
+        Intent intent = new Intent(LoginActivity.this, GifActivity.class);
+        startActivity(intent);
     }
 
     @Override

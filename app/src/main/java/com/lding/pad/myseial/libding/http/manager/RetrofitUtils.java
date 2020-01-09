@@ -1,9 +1,7 @@
 package com.lding.pad.myseial.libding.http.manager;
 
-import com.lding.pad.myseial.libding.application.PadApplication;
 import com.lding.pad.myseial.libding.utils.NetworkUtils;
-
-
+import com.lding.pad.myseial.library.loadinglibrary.conn.DemoApp;
 import java.io.File;
 import java.io.IOException;
 import java.util.Locale;
@@ -53,7 +51,7 @@ public class RetrofitUtils {
                 if (mOkHttpClient == null) {
                     // OkHttpClient配置是一样的,静态创建一次即可
                     // 指定缓存路径,缓存大小100Mb
-                    Cache cache = new Cache(new File(PadApplication.getContext().getCacheDir(), "HttpCache"),
+                    Cache cache = new Cache(new File(DemoApp.getContext().getCacheDir(), "HttpCache"),
                             CACHE_SIZE);
 
                     mOkHttpClient = new OkHttpClient.Builder().cache(cache)
@@ -74,13 +72,13 @@ public class RetrofitUtils {
         @Override
         public Response intercept(Chain chain) throws IOException {
             Request request = chain.request();
-            if (!NetworkUtils.isConnected(PadApplication.getContext())) {
+            if (!NetworkUtils.isConnected(DemoApp.getContext())) {
                 request = request.newBuilder().cacheControl(CacheControl.FORCE_CACHE).build();
 //                LogUtils.e(TAG, "no network");
             }
             Response originalResponse = chain.proceed(request);
 
-            if (NetworkUtils.isConnected(PadApplication.getContext())) {
+            if (NetworkUtils.isConnected(DemoApp.getContext())) {
                 //有网的时候读接口上的@Headers里的配置，你可以在这里进行统一的设置
                 String cacheControl = request.cacheControl().toString();
                 return originalResponse.newBuilder()

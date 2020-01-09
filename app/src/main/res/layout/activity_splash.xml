@@ -7,6 +7,23 @@
 
     >
 
+    <ProgressBar
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/splash_tv_text"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/splash_tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/initializing_splash_library"/>
+
     <ImageView
         android:id="@+id/banner_img"
         android:layout_centerInParent="true"
@@ -21,6 +38,7 @@
         android:layout_alignParentBottom="true"
         android:text="进入首页"
         android:textAllCaps="true"
+        android:visibility="gone"
         android:textSize="14sp"
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"

@@ -14,6 +14,13 @@
     </style>
 
 
+    <style name="BaseSplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/bkg_splash</item>//在加载数据过程中, 启动页面也需要处理系统留白, 并且全屏显示.
+    </style>
+
+    <style name="SplashTheme" parent="BaseSplashTheme"/>
+
+
     <!--加载进度Dialog-->
     <style name="CustomDialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
@@ -29,5 +36,19 @@
         <item name="android:windowNoTitle">false</item>
 
     </style>
+
+    <!--加载进度 gif_dialog-->
+    <style name="gif_dialog"
+        parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
 
 </resources>

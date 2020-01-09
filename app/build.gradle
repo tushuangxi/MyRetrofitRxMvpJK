@@ -17,6 +17,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
 
 
 }
@@ -54,14 +58,31 @@ dependencies {
     //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:26.0.0-alpha1'
 
-    compile 'io.reactivex:rxjava:1.1.0'
-    compile 'io.reactivex:rxandroid:1.1.0'
-    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
-    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
-    compile 'com.google.code.gson:gson:2.6.2'
+    implementation 'io.reactivex:rxjava:1.1.7'// 初始化闪屏  需要1.1.7
+    implementation 'io.reactivex:rxandroid:1.2.1'
 
+    implementation 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+    implementation 'com.google.code.gson:gson:2.6.2'
 
     implementation 'com.jakewharton:butterknife:8.4.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    //gifloadinglibrary  方式一
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.1.+'
+    implementation 'fr.tvbarthel.blurdialogfragment:lib:2.2.0'
+    annotationProcessor 'fr.tvbarthel.blurdialogfragment:lib:2.2.0'
+
+    //gifloadinglibrary  方式二  必须最小sdk21
+//    implementation 'com.roger.gifloadinglibrary:gifloadinglibrary:1.1.1'
+
+    implementation 'com.android.support:recyclerview-v7:27.0.0'
+    //-----------------------------------------------------------------------初始化闪屏
+    implementation 'com.google.dagger:dagger:2.5'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.5'
+    // 内存泄露
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    //-----------------------------------------------------------------------初始化闪屏
 }
