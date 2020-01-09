@@ -15,11 +15,8 @@ import java.util.List;
 
 public class GifActivity extends AppCompatActivity {
 
-  //num11
-  //
-
   public static int[] IDS = {
-       R.drawable.num1, R.drawable.num2
+        R.drawable.num0,R.drawable.num1,R.drawable.num2,R.drawable.num3, R.drawable.num5, R.drawable.num7, R.drawable.num8
   };
 
   private RecyclerView mRecyclerView;
